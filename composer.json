@@ -18,5 +18,16 @@
             "ZCms\\Admin\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ZCms\\Admin\\AdminServiceProvider"
+            ],
+            "aliases": {
+                "ZCms": "ZCms\\Admin\\Facades\\Admin"
+            }
+
+        }
+    },
     "minimum-stability": "dev"
 }

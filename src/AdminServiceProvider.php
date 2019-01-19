@@ -14,9 +14,10 @@ use Illuminate\Support\ServiceProvider;
 class AdminServiceProvider extends ServiceProvider
 {
     public function boot(){
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'zcms');
         $this->publishes([
-            __DIR__.'../config/zdzx.php'=>config_path('zcms.php')
-        ]);
+            __DIR__.'/../config'=>config_path()
+        ],'zcms');
     }
 
     public function register(){
